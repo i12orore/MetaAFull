@@ -11,22 +11,19 @@ class FirstImprovementStrategyNeighExplorator
 {
 private:
 
-
+std::vector<int> caminoInicial;
+int pesoInicial;
 
 public:
 
-int SolucionVecina(){
-//solucion aleatoria
-int posicionABuscar=aleatorio()
-//declaro el vector que voy a usar
-std::vector<int> vector;
-//encontrar posicion para buscar vecinos
-for (int i = 0; i < vector.size(); i++) {
-  if (posicionABuscar==vector[i]) {
-      posicionAnterior==vector[i-1];
-      posicionPosterior==vector[i+1];
+int SolucionVecina(std::vector<int> v;){
+NeightOperator n;
+for (int i = 0; i < v.size(); i++) {
+  for (int j = i+1; j < v.size(); j++) {
+    if(n.pesoInicial<)
   }
 }
+
 
 }
 
