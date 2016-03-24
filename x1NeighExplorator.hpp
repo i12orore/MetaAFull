@@ -1,7 +1,10 @@
 // X1NeighExplorator
+
+
+
 #ifndef __X1_NEIGH_EXPLORATOR__
 #define __X1_NEIGH_EXPLORATOR__
-//Suponiendo X1 Fast Improvement Strategy --> Mira a los vecinos y el primero que se cambia es el que sea mejor al que estoy buscando
+//Suponiendo X1 First Improvement Strategy --> Mira a los vecinos y el primero que se cambia es el que sea mejor al que estoy buscando
 //el X2 será el Best Improvement Strategy --> Mira todos los vecinos y coge el mejor
 class FastImprovementStrategyNeighExplorator
 {
@@ -11,7 +14,20 @@ private:
 
 public:
 
+int SolucionVecina(){
+//solucion aleatoria
 
+//declaro el vector que voy a usar
+std::vector<int> vector;
+//encontrar posicion para buscar vecinos
+for (int i = 0; i < vector.size(); i++) {
+  if (posicionABuscar==vector[i]) {
+      posicionAnterior==vector[i-1];
+      posicionPosterior==vector[i+1];
+  }
+}
+
+}
 
 
 
