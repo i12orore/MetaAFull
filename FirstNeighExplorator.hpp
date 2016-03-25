@@ -13,7 +13,7 @@ solution inicial;
 solution fin;
 
 public:
-	bestNeightOperator(solution pasada,Instancia & solucion){
+	firstNeightOperator(solution pasada,Instancia & solucion){
 		inicial=pasada;
 		inicial.calcularPeso(solucion);
 		firstNeightOp(solucion);
