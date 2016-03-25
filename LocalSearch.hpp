@@ -45,7 +45,7 @@ void LocalSearch::localSearch(Instancia & solucion, solution & b)
 					final.calcularPeso();
 					if(inicial.getPeso()!=fin.getPeso())
 					{
-
+						//si pasa esto, se intercambian, esto es lo que tengo que guardar
 					}
 					else
 						contador++;
