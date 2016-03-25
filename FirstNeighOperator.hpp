@@ -29,9 +29,9 @@ public:
 void firstNeightOperator::firstNeightOp(Instancia & solucion){
 	fin=inicial;
 solution auxiliar;
+solution numerofinal;
 int encontrado=0;
-while(encontrado==0)
-{
+
   	for(int i=0;i<inicial.getCamino().size()-1;i++)
     {
 		    for(int j=i+1;j<inicial.getCamino().size()-1;j++)
@@ -39,14 +39,14 @@ while(encontrado==0)
     			NeightOperator a (inicial,i,j);
     			auxiliar=a.devolver();
     			auxiliar.calcularPeso(solucion);
-      			if(auxiliar.getPeso()<fin.getPeso())
+      			if(auxiliar.getPeso()<fin.getPeso()&&encontrado==0)
             {
-      				fin=auxiliar;
+							std::cout << "lo cambio" << std::endl;
               encontrado=1;
+							fin=auxiliar;
 	          }
         }
 	   }
-}//while
 
 }
 

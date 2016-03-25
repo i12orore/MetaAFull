@@ -62,4 +62,7 @@ cout<<b.getPeso()<<endl;
 //en construccion
 bestNeightOperator q(b,prueba);
 q.printFin();
-}
+
+firstNeightOperator q2(b,prueba);
+q2.printFin();
+}//main
