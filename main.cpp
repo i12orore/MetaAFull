@@ -4,6 +4,7 @@
 #include "SolGenerator.hpp"
 #include "aleatorio.hpp"
 #include "NeightOperator.hpp"
+#include "BestNeightOperator.hpp"
 
 using namespace std;
 
@@ -56,6 +57,10 @@ for(int i=0;i<auxiliar2.size();i++){
 b.calcularPeso(prueba);
 cout<<endl;
 cout<<b.getPeso()<<endl;
+
+//en construccion
+bestNeightOperator q(b,prueba);
+q.printFin();
 }
 
 

@@ -22,9 +22,14 @@ public:
 		camino=copia.camino;
 		peso=0;
 	}
+	solution(){
+	}
+
 	vector <int> & getCamino(){return camino;};
 	int getPeso(){return peso;};
 	void calcularPeso(Instancia & solucion);
+	solution& operator = (const solution &p);
+	void imprimir();
 
 };
 
@@ -39,5 +44,21 @@ int j=1;
 
 
 };
+solution& solution::operator = (const solution &p){
+    if(this!=&p){ //Comprueba que no se esté intentanod igualar un objeto a sí mismo
+        this->camino = p.camino;
+        this->peso = p.peso;
+    }
+    return *this;
+};
+void solution::imprimir(){
+	cout<<"camino: "<<endl;
+	for(int i=0;i<camino.size();i++){
+		cout<<camino[i]<<" ";
+	}
+	cout<<endl;
+	cout<<"Peso: "<<peso<<endl;	
+
+}
 
 #endif
