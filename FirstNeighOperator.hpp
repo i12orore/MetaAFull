@@ -26,7 +26,7 @@ public:
 
 };
 
-void firstNeightOperator::firstNeightOp(Instancia & solucion,solution & b){
+void firstNeightOperator::firstNeightOp(Instancia & solucion){
 	fin=inicial;
 solution auxiliar;
 solution numerofinal;

@@ -16,7 +16,7 @@ solution inicial;
 
 public:
 	localSearch(solution pasada,Instancia & solucion){
-		solution inicial;
+		solution inicial=solucion;
 		solution fin;
 	}
 	void localSearch(Instancia & solucion,solution & b);
@@ -39,19 +39,23 @@ void LocalSearch::localSearch(Instancia & solucion, solution & b)
 	{
 		if (metodo == 1)
 		{
-			for (int i = 0; i <1000; i++)
+			for (int i = 0; i <1000 && contador < 3; i++)
 			{
-					if((inicial.getPeso()!=fin.getPeso())&&(contador<3))
+					final=firstNeightOperator q(b,prueba);
+					final.calcularPeso();
+					if(inicial.getPeso()!=fin.getPeso())
 					{
-						firstNeightOperator q(b,prueba);
+
 					}
 					else
 						contador++;
+					inicial=final;
+					inicial.getPeso();
 			}//for
 		}//if
 		else
 		{
-			for (int i = 0; i < 1000; i++)
+			for (int i = 0; i < 1000 && contador < 3; i++)
 			{
 				if((inicial.getPeso()!=fin.getPeso())&&(contador<3))
 				{
