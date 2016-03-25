@@ -5,6 +5,7 @@
 #include "aleatorio.hpp"
 #include "NeightOperator.hpp"
 #include "BestNeightOperator.hpp"
+#include "FirstNeighOperator.hpp"
 
 using namespace std;
 
@@ -18,20 +19,20 @@ solGenerator p;
 //aqui simplemente devuelve un peso con un vector que es auxiliar, donde esta ordenado en aleatorio
 aleatoria=p.solAlgoritmoTSP(prueba,&auxiliar);
 /*for(int i=0;i<auxiliar.size();i++){
-	if(i<auxiliar.size()-1)	
+	if(i<auxiliar.size()-1)
 		cout<<auxiliar[i]<<"->";
 	else{
 		cout<<auxiliar[i]<<endl;
 	}
 }*/
 //hasta aqui, la solucion esta en el vector aleatoria
-//convierto la solucion en un objeto 
+//convierto la solucion en un objeto
 solution t(auxiliar);
 //para imprimirlo
 vector <int> &  auxiliar2=t.getCamino();
 
 for(int i=0;i<auxiliar2.size();i++){
-	if(i<auxiliar2.size()-1)	
+	if(i<auxiliar2.size()-1)
 		cout<<auxiliar2[i]<<"->";
 	else{
 		cout<<auxiliar2[i]<<endl;
@@ -47,7 +48,7 @@ solution b(a.devolver());
 
 auxiliar2=b.getCamino();
 for(int i=0;i<auxiliar2.size();i++){
-	if(i<auxiliar2.size()-1)	
+	if(i<auxiliar2.size()-1)
 		cout<<auxiliar2[i]<<"->";
 	else{
 		cout<<auxiliar2[i]<<endl;
@@ -62,7 +63,3 @@ cout<<b.getPeso()<<endl;
 bestNeightOperator q(b,prueba);
 q.printFin();
 }
-
-
-
-
